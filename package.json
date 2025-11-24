@@ -13,5 +13,8 @@
   "type": "commonjs",
   "devDependencies": {
     "sass": "^1.94.2"
+  },
+  "dependencies": {
+    "js-cookie": "^3.0.5"
   }
 }

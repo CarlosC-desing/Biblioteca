@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">Librarius</h1>
+    </header>
+    <main class="main">
+        <div class="main__container">
+            <section class="main__section">
+                <form id="formBook" class="main__form" name="products">
+                    <label class="form__label" for="code">Code</label>
+                    <input class="form__input" type="text" name="code" id="code" required>
+                    <br>
+                    <label class="form__label" for="title">Title</label>
+                    <input class="form__input" type="text" name="title" id="title" required>
+                    <br>
+                    <label class="form__label" for="author">Author</label>
+                    <input class="form__input" type="text" name="author" id="author" required>
+                    <br>
+                    <label class="form__label" for="price">Price</label>
+                    <input class="form__input form__input--price" type="number" step="0.1" name="price" id="price"
+                        required>
+                    <br>
+                    <label class="form__label" for="borrowed">Borrowed</label>
+                    <input class="form__input form__input--checkbox" type="checkbox" name="borrowed" id="borrowed">
+                    <br>
+                    <button class="form__button" type="button" id="btnAddBook">Add Book</button>
+                </form>
+                <div class="main__content">
+                    <p class="main__paragraph--bold">Total Books:<span id="totalBooks" class="main__paragraph--blue"></span></p>
+                    <p class="main__paragraph--bold">Total Borrowed Books:<span id="totalBorrowed" class="main__paragraph--blue"></span></p>
+                    <p class="main__paragraph--bold">Total amount with VAT:<span id="totalAmount" class="main__paragraph--blue"></span></p>
+                </div>
+            </section>
+            <section class="main__section">
+                <table id="books-table" class="books-table table">
+                    <thead class="books-table__head">
+                        <tr class="books-table__row">
+                            <th class="books-table__cell books-table__cell--header">Code</th>
+                            <th class="books-table__cell books-table__cell--header">Title</th>
+                            <th class="books-table__cell books-table__cell--header">Author</th>
+                            <th class="books-table__cell books-table__cell--header">Borrowed</th>
+                            <th class="books-table__cell books-table__cell--header">Price</th>
+                            <th class="books-table__cell books-table__cell--header">Price with VAT</th>
+                        </tr>
+                    </thead>
+                    <tbody class="books-table__body"></tbody>
+                    <tfoot class="books-table__footer"></tfoot>
+                </table>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <h1 class="footer__title">Librarius</h1>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+<script src="assets/Js/main.js"></script>
+
+</html>
