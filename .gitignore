@@ -1,0 +1,7 @@
+# .gitignore
+
+# Ignorar las dependencias
+node_modules/
+
+# Ignorar el archivo CSS generado (con la ruta assets/)
+assets/css/main.css
